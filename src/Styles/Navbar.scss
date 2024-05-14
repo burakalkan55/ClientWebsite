@@ -5,15 +5,15 @@
   text-decoration: none;
 }
 .navbar.scrolled {
-  background-color: #096cae; /* Sayfa kaydırıldığında arka planı siyah yap */
+  background-color: #92b2c7; 
 }
 
 .navbar {
-  position: fixed; /* Navbar'ı sabitler */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Navbar'ın diğer öğelerin üzerine gelmesini sağlar */
+  z-index: 999; 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -62,19 +62,19 @@
     border-radius: 4px;
     background-color: #000a62;
     border: none;
-    overflow: hidden; /* Yazının taşmasını önlemek için */
+    overflow: hidden; 
 
     a {
       font-family: "Poppins", sans-serif;
       font-weight: 600;
       font-style: normal;
       color: #ffffff;
-      text-align: center; /* Metni yatayda ortala */
-      font-size: 1vw; /* Yazı boyutunu vw cinsinden ayarla */
-      max-width: 100%; /* Yatayda taşmayı önlemek için */
-      white-space: nowrap; /* Satır sonuna kadar kesme */
-      overflow: hidden; /* Yazının taşmasını önlemek için */
-      text-overflow: ellipsis; /* Taşan metni kesme */
+      text-align: center; 
+      font-size: 1vw; 
+      max-width: 100%; 
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
     }
   }
 
@@ -93,11 +93,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #096cae;
+    background-color: #c2d7e5;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 999; /* Açılır menünün diğer öğelerin üzerine gelmesini sağlar */
+    z-index: 999; 
   }
 
   .navigating ul {
