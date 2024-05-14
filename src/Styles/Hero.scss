@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+  .hero {
+   margin-top: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+    flex-wrap: wrap; /* Eğer içerik yatay alanda sığmazsa alt satıra geçmesini sağlar */
+  }
+  
+ 
+  
+  .hero-img{
+    margin-top: 10vh;
+    margin-left: 5%;
+  }
+  .hero-img img {
+   
+    max-width: 100%; /* Görüntünün genişliği %100'e ayarlanır */
+    height: auto; /* Genişliğe göre orantılı olarak yükseklik ayarlanır */
+    margin-bottom: 20px; /* .hero-text ve .hero-img arasında boşluk bırakır */
+  }
+  .hero-text {
+   
+    width: 80%;
+    max-width: 400px;
+    text-align: start; /* Metni merkezi hizaya getirme */
+    margin-bottom: 20px; /* .hero-text ve .hero-img arasında boşluk bırakır */
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    
+    .hero-t-img{
+        padding-top: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        cursor: pointer;
+
+       
+    
+    }
+
+    a img{
+       width: 70%;
+    }
+   
+}
+
+
+.hero-text h1 {
+   
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-style: normal;
+    color: #1e293b;
+
+    span{
+        margin-left: 10%;
+    }
+   
+}
+
+
+
+.hero-text p {
+   padding-top: 6%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3e4e60;
+    margin: 0; /* Paragraf için ekstra boşlukları kaldırır */
+}
+
+  

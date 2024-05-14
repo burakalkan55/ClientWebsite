@@ -4,8 +4,16 @@
   list-style-type: none;
   text-decoration: none;
 }
+.navbar.scrolled {
+  background-color: #096cae; /* Sayfa kaydırıldığında arka planı siyah yap */
+}
 
 .navbar {
+  position: fixed; /* Navbar'ı sabitler */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Navbar'ın diğer öğelerin üzerine gelmesini sağlar */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,6 +25,7 @@
     align-items: center;
     margin-left: 8%;
   }
+
   .navs {
     width: 40vw;
 
@@ -30,42 +39,118 @@
         font-style: normal;
         color: #1e293b;
       }
+
       li a:hover {
         color: #096cae;
-       
       }
     }
   }
 
-  .nav-button{
+  .nav-button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 8%;
-
-    .nv-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5vh;
-        width: 10vw;
-        border-radius: 4px;
-        background-color: #000A62;
-        border: none;
-
-        a{
-            font-family: "Poppins", sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            color: #FFFFFF;
-        }
-
-
-       
-    }
-
-    
   }
 
-  
+  .nv-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 4px;
+    background-color: #000a62;
+    border: none;
+    overflow: hidden; /* Yazının taşmasını önlemek için */
+
+    a {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      color: #ffffff;
+      text-align: center; /* Metni yatayda ortala */
+      font-size: 1vw; /* Yazı boyutunu vw cinsinden ayarla */
+      max-width: 100%; /* Yatayda taşmayı önlemek için */
+      white-space: nowrap; /* Satır sonuna kadar kesme */
+      overflow: hidden; /* Yazının taşmasını önlemek için */
+      text-overflow: ellipsis; /* Taşan metni kesme */
+    }
+  }
+
+  .nv-button:hover {
+    background-color: #096cae;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navigating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #096cae;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999; /* Açılır menünün diğer öğelerin üzerine gelmesini sağlar */
+  }
+
+  .navigating ul {
+    width: 15vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigating ul li {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+
+    width: 30vw;
+    background-color: white;
+    padding: 20%;
+    margin: 10px 0;
+  }
+
+  .navigating ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+  }
+
+  .navigating ul li a:hover {
+    color: #096cae;
+  }
+
+  .navbar .nav-button {
+    display: none;
+  }
+
+  .navs {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    width: 15vw;
+    height: 5vh;
+    margin-right: 10%;
+
+    .icon {
+      width: 15vw;
+      height: 5vh;
+    }
+  }
 }
